@@ -1,0 +1,93 @@
+@use "variables";
+@use "header";
+@use "body";
+@use "bodyBackground";
+@use "characters";
+@use "footer";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Avenir, sans-serif;
+	list-style: none;
+	text-decoration: none;
+	font-size: 62.5%;
+}
+body {
+	color: (variables.$corTextoPrimario);
+}
+@font-face {
+	font-family: Avenir;
+	src: url(../../assets/fonts/Avenir-Regular.woff2);
+	font-weight: 400;
+}
+@font-face {
+	font-family: Avenir;
+	src: url(../../assets/fonts/Avenir-Bold.woff2);
+	font-weight: 700;
+}
+@mixin text($fontSize: 1.6rem) {
+	font-size: $fontSize;
+	line-height: $fontSize + 1rem;
+}
+
+@mixin title($fontSize: 2.8rem) {
+	@include text($fontSize);
+}
+.text--big {
+	@include text(1.8rem);
+	@media (max-width: 768px) {
+		@include text(1.5rem);
+	}
+}
+.text {
+	@include text;
+	@media (max-width: 768px) {
+		@include text(1.4rem);
+	}
+}
+.text--small {
+	@include text(1.2rem);
+	@media (max-width: 768px) {
+		@include text(1.1rem);
+	}
+}
+
+.title--big {
+	@include title(4.4rem);
+	@media (max-width: 768px) {
+		@include title(2.6rem);
+	}
+}
+.title {
+	@include title(4rem);
+	@media (max-width: 768px) {
+		@include title(2.4rem);
+	}
+}
+.title--small {
+	@include title;
+	@media (max-width: 768px) {
+		@include title(2.2rem);
+	}
+}
+.link-text {
+	@include text(1.8rem);
+	text-decoration: underline;
+}
+html {
+	background-color: (variables.$corDeFundo);
+}
+
+.button {
+	background-color: (variables.$corDeFundo);
+	color: #fff;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	font-weight: bold;
+
+	&:hover {
+		background-color: (variables.$corDeFundo);
+	}
+}

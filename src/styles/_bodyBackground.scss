@@ -1,0 +1,15 @@
+.background__body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	z-index: -1;
+}
+
+.background__body img {
+	width: 100%;
+}
+.body--is-opacity {
+	opacity: 0.6;
+}
