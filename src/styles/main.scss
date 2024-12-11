@@ -72,6 +72,10 @@ body {
 		@include title(2.2rem);
 	}
 }
+img {
+	max-width: 100%;
+	height: auto;
+}
 .link-text {
 	@include text(1.8rem);
 	text-decoration: underline;
@@ -89,5 +93,14 @@ html {
 
 	&:hover {
 		background-color: (variables.$corDeFundo);
+	}
+}
+@media (max-width: 768px) {
+	.button {
+		background-color: (variables.$corDeFundo);
+		color: #fff;
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+		font-weight: normal;
 	}
 }

@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			diminuirOpacity();
 		}
 	});
+	const hamburgerMenu = document.querySelector(".hamburger-menu");
+	const nav = document.querySelector(".header__nav");
+
+	hamburgerMenu.addEventListener("click", () => {
+		nav.classList.toggle("active");
+		hamburgerMenu.classList.toggle("active");
+	});
 });
 
 function diminuirOpacity() {
